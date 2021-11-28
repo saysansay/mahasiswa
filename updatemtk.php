@@ -11,7 +11,7 @@
 
 <body>
     <div class="center">
-        <h1>HAPUS DATA MATAKULIAH</h1>
+        <h1>UPDATE DATA MATAKULIAH</h1>
         <a href="mtk.php">Back </a><br>
         <?php
         if (isset($_REQUEST['id'])) {
@@ -30,11 +30,11 @@
             $retval = mysqli_query($conn, $sql);
             if ($retval) {
                 echo "<script>
-                alert('Success Delete data');window.location='mtk.php';
+                alert('Success update data');window.location='mtk.php';
                 </script>";
             } else {
                 echo "<script>
-                alert('Error Delete data');window.location='deletemtk.php';
+                alert('Error update data');window.location='updatemtk.php';
                 </script>";
             }
         mysqli_close($conn);
@@ -44,18 +44,18 @@
             <table border="1">
                 <tr>
                     <td>KODE</td>
-                    <td><input name="vkode" maxlength="5" value=<?php echo $row['kd_mtk'] ?>></td>
+                    <td><input name="vkode" maxlength="5" value="<?php echo $row['kd_mtk'] ?>"></td>
                 </tr>
                 <tr>
                     <td>Matakuliah</td>
-                    <td><input name="vmatakuliah" maxlength="20" value=<?php echo $row['nm_mtk'] ?>></td>
+                    <td><input name="vmatakuliah" maxlength="20" value="<?php echo $row['nm_mtk'] ?>"></td>
                 </tr>
                 <tr>
                     <td>SKS</td>
                     <td><input name="vsks" maxlength="3" value="<?php echo $row['sks'] ?>"></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="hapus">Hapus</button></td>
+                    <td><button type="submit" name="update">Update</button></td>
                 </tr>
 
             </table>

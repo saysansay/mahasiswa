@@ -44,11 +44,11 @@
             <table border="1">
                 <tr>
                     <td>KODE</td>
-                    <td><input name="vkode" maxlength="5" value=<?php echo $row['kd_mtk'] ?>></td>
+                    <td><input name="vkode" maxlength="5" value="<?php echo $row['kd_mtk'] ?>"></td>
                 </tr>
                 <tr>
                     <td>Matakuliah</td>
-                    <td><input name="vmatakuliah" maxlength="20" value=<?php echo $row['nm_mtk'] ?>></td>
+                    <td><input name="vmatakuliah" maxlength="20" value="<?php echo $row['nm_mtk'] ?>"></td>
                 </tr>
                 <tr>
                     <td>SKS</td>

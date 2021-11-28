@@ -44,11 +44,11 @@
             <table border="1">
                 <tr>
                     <td>NIM</td>
-                    <td><input name="vnim" maxlength="10" value=<?php echo $row['nim'] ?>></td>
+                    <td><input name="vnim" maxlength="10" value="<?php echo $row['nim'] ?>"></td>
                 </tr>
                 <tr>
                     <td>Nama</td>
-                    <td><input name="vnama" maxlength="20" value=<?php echo $row['nama'] ?>></td>
+                    <td><input name="vnama" maxlength="20" value="<?php echo $row['nama'] ?>"></td>
                 </tr>
                 <tr>
                     <td>Alamat</td>

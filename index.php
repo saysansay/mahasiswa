@@ -8,7 +8,9 @@
 <ol>
   <li><a href="mahasiswa.php">Mahasiswa</a></li>
   <li><a href="mtk.php">Mata Kuliah</a></li>
-  <li>Nilai</li>
+  <li><a href="nilai.php">Nilai</a></li>
+  <li>Cetak Nilai</li>
+
 </ol>
 
 <p>Universitas BUDI LUHUR</p>

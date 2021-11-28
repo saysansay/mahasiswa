@@ -37,6 +37,7 @@
             </tr>
         <?php } ?>
         </table>
+        <a href="index.php">Menu Utama</a><br>
 
     </div>
 
