@@ -1,7 +1,7 @@
 <?php
 $host = '10.1.211.136';
 $user =  'wms';
-$pass = 'Ais03082012yk';
+$pass = '';
 $db = 'mahasiswa';
 $conn = mysqli_connect($host,$user,$pass,$db);
 if(!$conn){
