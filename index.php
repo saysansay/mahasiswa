@@ -9,7 +9,7 @@
   <li><a href="mahasiswa.php">Mahasiswa</a></li>
   <li><a href="mtk.php">Mata Kuliah</a></li>
   <li><a href="nilai.php">Nilai</a></li>
-  <li>Cetak Nilai</li>
+  <li><a href="cetaknilai.php">Cetak Nilai</a></li>
 
 </ol>
 

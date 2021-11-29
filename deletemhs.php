@@ -11,7 +11,7 @@
 
 <body>
     <div class="center">
-        <h1>HAPUS DATA MAHASISWA</h1>
+        <h1>DELETE DATA MAHASISWA</h1>
         <a href="mahasiswa.php">Back </a><br>
         <?php
         if (isset($_REQUEST['id'])) {
@@ -55,7 +55,7 @@
                     <td><textarea name="valamat" maxlength="30"><?php echo $row['alamat'] ?></textarea></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="hapus">Hapus</button></td>
+                    <td><button type="submit" name="hapus">Delete</button></td>
                 </tr>
 
             </table>

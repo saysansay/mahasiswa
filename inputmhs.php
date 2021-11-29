@@ -26,7 +26,7 @@
                 </script>";
             }else {
                 echo "<script>
-                alert('Error input data');
+                alert('Error input data');window.location='inputmhs.php'
                 </script>";  
             }
         }

@@ -11,7 +11,7 @@
 
 <body>
     <div class="center">
-        <h1>HAPUS DATA MATAKULIAH</h1>
+        <h1>DELETE DATA MATAKULIAH</h1>
         <a href="mtk.php">Back </a><br>
         <?php
         if (isset($_REQUEST['id'])) {
@@ -55,7 +55,7 @@
                     <td><input name="vsks" maxlength="3" value="<?php echo $row['sks'] ?>"></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="hapus">Hapus</button></td>
+                    <td><button type="submit" name="hapus">Delete</button></td>
                 </tr>
 
             </table>

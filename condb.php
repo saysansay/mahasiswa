@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$user =  'root';
+$host = '10.1.211.136';
+$user =  'wms';
 $pass = 'Ais03082012yk';
-$db = 'budiluhur';
+$db = 'mahasiswa';
 $conn = mysqli_connect($host,$user,$pass,$db);
 if(!$conn){
     echo "Error : ". mysqli_connect_error();

@@ -12,7 +12,7 @@ include("list.php");
 
 <body>
     <div class="center">
-        <h1>DELETE DATA NILAI</h1>
+        <h1>HAPUS DATA NILAI</h1>
         <a href="nilai.php">Back </a><br>
         <?php
         if (isset($_REQUEST['id'])) {
@@ -24,20 +24,23 @@ include("list.php");
                 $row = mysqli_fetch_assoc($retval);
             }
         }
-        if (isset($_POST['hapus'])) {
+        if (isset($_POST['update'])) {
             $nim = $_POST['vnim'];
             $kode = $_POST['vkode'];
-            echo $nim."-".$kode;
-
-            $sql = "DELETE FROM nilai_tab  WHERE nim='$nim' AND kd_mtk='$kode'";
+            $tugas = $_POST['vtugas'];
+            $uts = $_POST['vuts'];
+            $uas = $_POST['vuas'];
+            $cnim = $_POST['voldnim'];
+            $ckode = $_POST['voldkode'];
+            $sql = "UPDATE nilai_tab SET nim='$nim',kd_mtk='$kode',tugas='$tugas',uts='$uts',uas='$uas'  WHERE nim='$cnim' AND kd_mtk='$ckode'";
             $retval = mysqli_query($conn, $sql);
             if ($retval) {
                 echo "<script>
-                alert('Success Delete data');window.location='nilai.php';
+                alert('Success Update data');window.location='nilai.php';
                 </script>";
             } else {
                 echo "<script>
-                alert('Error Delete data');window.location='deletenilai.php';
+                alert('Error Update data');window.location='updatenilai.php';
                 </script>";
             }
         }
@@ -50,7 +53,7 @@ include("list.php");
                             <?php
                             $sql = "SELECT nim,nama FROM mahasiswa_tab";
                             $retmhs = mysqli_query($conn, $sql);
-                            $retval = "";
+                            
                             while ($rowmhs = mysqli_fetch_assoc($retmhs)) {
                                 if ($rowmhs['nim'] == $row['nim']) { ?>
                                     <option value="<?php echo $rowmhs['nim'] ?>" selected><?php echo $rowmhs['nim'] . "-" . $rowmhs['nama'] ?></option>
@@ -70,7 +73,7 @@ include("list.php");
                             <?php
                             $sql = "SELECT kd_mtk,nm_mtk FROM matakuliah_tab";
                             $retmhs = mysqli_query($conn, $sql);
-                            $retval = "";
+                           
                             while ($rowmtk= mysqli_fetch_assoc($retmhs)) {
                                 if ($rowmtk['kd_mtk'] == $row['kd_mtk']) { ?>
                                     <option value="<?php echo $rowmtk['kd_mtk'] ?>" selected><?php echo $rowmtk['kd_mtk'] . "-" . $rowmtk['nm_mtk'] ?></option>
@@ -94,7 +97,9 @@ include("list.php");
                     <td><input name="vuas" maxlength="3" value="<?php echo $row['uas'] ?>"></td>
                 </tr>
                 <tr>
-                    <td><button type="submit" name="hapus">Hapus</button></td>
+                    <input hidden name="voldnim" value="<?php echo $row['nim'] ?>">
+                    <input hidden name="voldkode" value="<?php echo $row['kd_mtk'] ?>">
+                    <td><button type="submit" name="update">Update</button></td>
                 </tr>
 
             </table>
