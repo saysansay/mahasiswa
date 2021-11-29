@@ -12,7 +12,7 @@ include("list.php");
 
 <body>
     <div class="center">
-        <h1>HAPUS DATA NILAI</h1>
+        <h1>UPDATE DATA NILAI</h1>
         <a href="nilai.php">Back </a><br>
         <?php
         if (isset($_REQUEST['id'])) {
