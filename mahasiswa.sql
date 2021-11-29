@@ -1,6 +1,6 @@
 /*
-SQLyog Ultimate v13.1.7 (64 bit)
-MySQL - 8.0.17 : Database - budiluhur
+SQLyog Ultimate v13.1.8 (64 bit)
+MySQL - 5.7.17-log : Database - mahasiswa
 *********************************************************************
 */
 
@@ -26,8 +26,10 @@ CREATE TABLE `mahasiswa_tab` (
 /*Data for the table `mahasiswa_tab` */
 
 insert  into `mahasiswa_tab`(`nim`,`nama`,`alamat`) values 
-('130230','Patlisan0000','CIkarang 1'),
-('154333','Namoraaa','Jakarta 1');
+('129380','Agust','Tanggerang'),
+('130230','Patlisan','CIkarang 1'),
+('154330','Novanda','Ciledug'),
+('154333','Namora','Jakarta 1');
 
 /*Table structure for table `matakuliah_tab` */
 
@@ -61,6 +63,14 @@ CREATE TABLE `nilai_tab` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `nilai_tab` */
+
+insert  into `nilai_tab`(`nim`,`kd_mtk`,`tugas`,`uts`,`uas`) values 
+('129380','2001',100,78,90),
+('129380','2002',100,70,10),
+('129380','2003',80,90,70),
+('130230','2001',50,70,98),
+('130230','2002',100,100,100),
+('130230','2003',80,45,40);
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
